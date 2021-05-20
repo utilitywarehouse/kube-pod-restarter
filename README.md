@@ -10,14 +10,14 @@ The app updates an annotation on the specified deployment to trigger a rollout.
 The annotation is the sha256sum of one of the watched files and is stored under
 the key: `uw.systems/<deployment-name>`.
 
-# Environment variables
+## Environment variables
 It expects the following environment variables:
 - `DEPLOYMENT_NAME`: the name of the deployment to roll.
 - `SUM_FILE`: a file name under the watched directory used to calculate the
    sha256sum to update the deployment annotation.
 - `WATCH_DIR`: the watched directory for changes
 
-# Example
+## Example
 
 For example this sidecar config would watch for certificate updates under
 /etc/matchbox dir:
