@@ -26,8 +26,6 @@ For example this sidecar config would watch for certificate updates under
           env:
             - name: DEPLOYMENT_NAME
               value: matchbox
-            - name: SUM_FILE
-              value: tls.crt
             - name: WATCH_DIR
               value: /etc/matchbox
           volumeMounts:
