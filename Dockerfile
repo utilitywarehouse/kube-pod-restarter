@@ -5,7 +5,7 @@ RUN apk add --no-cache curl &&\
   curl -Ls -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl &&\
   chmod +x /usr/local/bin/kubectl
 
-COPY run.sh /run.sh
+COPY kube-pod-restarter /kube-pod-restarter
 COPY reload /reload
 
-ENTRYPOINT ["/run.sh"]]
+ENTRYPOINT ["/kube-pod-restarter"]
